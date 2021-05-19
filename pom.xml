@@ -16,7 +16,7 @@
 	<properties><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<start-class>com.Manuel.Crypto.CryptoApplication</start-class>
+		<start-class>com.Manuel.Crypto.Crypto.CryptoApplication</start-class>
 		<java.version>11</java.version>
 	</properties>
 	<build>
