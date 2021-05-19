@@ -63,6 +63,7 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+
 		</plugins>
 	</build>
 	<dependencies>
@@ -96,6 +97,11 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>42.2.18</version>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>2.2.3</version>
 		</dependency>
 
 	</dependencies>
