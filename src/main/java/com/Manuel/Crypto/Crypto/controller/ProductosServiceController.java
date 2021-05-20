@@ -16,6 +16,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins ="*",maxAge = 3600)
 @RequestMapping("/Productos")
 public class ProductosServiceController {
 
