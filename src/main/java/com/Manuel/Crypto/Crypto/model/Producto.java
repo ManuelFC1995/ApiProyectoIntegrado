@@ -22,35 +22,38 @@ public class Producto {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     protected int Id;
-    @Column(name = "name", length = 30)
+    @Column(name = "name")
     private String name;
-    @Column(name = "id_producto", length = 30)
+    @Column(name = "id_producto")
     private int id_producto;
-    @Column(name = "talla", length = 30)
+    @Column(name = "talla")
     private String talla;
-    @Column(name = "descripcion", length = 80)
+    @Column(name = "descripcion")
     private String descripcion;
-    @Column(name = "Categoria", length = 80)
+    @Column(name = "Categoria")
     private String Categoria;
-
-    @Column(name = "Marca", length = 80)
+    @Column(name = "Categoria2")
+    private String Categoria2;
+    @Column(name = "Categoria3")
+    private String Categoria3;
+    @Column(name = "Marca")
     private String Marca;
     @Column(name = "Color")
     private String Color;
 
     @Column(name = "Sexo")
     private Boolean Sexo;
-    @Column(name = "Precio", length = 30)
+    @Column(name = "Precio")
     private float Precio;
-    @Column(name = "Uds", length = 30)
+    @Column(name = "Uds")
     private float Unidades;
-    @Column(name = "vendidos", length = 30)
+    @Column(name = "vendidos")
     private int vendidos;
-    @Column(name = "Imagen1", length = 30)
+    @Column(name = "Imagen1")
     protected String imagene1;
-    @Column(name = "Imagen2", length = 30)
+    @Column(name = "Imagen2")
     protected String imagene2;
-    @Column(name = "Imagen3", length = 30)
+    @Column(name = "Imagen3")
     protected String imagene3;
 
 
@@ -191,6 +194,21 @@ public class Producto {
         Id = id;
     }
 
+    public String getCategoria2() {
+        return Categoria2;
+    }
+
+    public void setCategoria2(String categoria2) {
+        Categoria2 = categoria2;
+    }
+
+    public String getCategoria3() {
+        return Categoria3;
+    }
+
+    public void setCategoria3(String categoria3) {
+        Categoria3 = categoria3;
+    }
 
     public float getUnidades() {
         return Unidades;

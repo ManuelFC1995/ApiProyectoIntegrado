@@ -70,6 +70,8 @@ public class ProductosService {
             newEntity.setImagene2(entity.getImagene2());
             newEntity.setImagene3(entity.getImagene3());
             newEntity.setCategoria(entity.getCategoria());
+            newEntity.setCategoria3(entity.getCategoria3());
+            newEntity.setCategoria2(entity.getCategoria2());
             newEntity.setUnidades(entity.getUnidades());
             newEntity.setDescripcion(entity.getDescripcion());
             newEntity.setVendidos(entity.getVendidos());
