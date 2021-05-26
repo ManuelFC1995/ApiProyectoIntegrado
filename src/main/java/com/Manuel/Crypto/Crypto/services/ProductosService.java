@@ -9,11 +9,17 @@ import com.Manuel.Crypto.Crypto.repositories.PedidoRepository;
 import com.Manuel.Crypto.Crypto.repositories.ProductoRepository;
 import com.Manuel.Crypto.Crypto.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 
 @Service
 public class ProductosService {
@@ -25,10 +31,21 @@ public class ProductosService {
     //devuelve todos los Productos
     public List<Producto> getAllProducto()
     {
+
         List<Producto> PList = repository.findAll();
 
         if(PList.size() > 0) {
             return PList;
+        } else {
+            return new ArrayList<Producto>();
+        }
+    }
+
+    public List<Producto> getProductoByPages(int index) throws RecordNotFoundException1 {
+        List<Producto> p = repository.getByLimit(index);
+
+        if(p.size()>=0) {
+            return p;
         } else {
             return new ArrayList<Producto>();
         }

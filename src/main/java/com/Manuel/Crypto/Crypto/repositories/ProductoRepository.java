@@ -11,5 +11,10 @@ import java.util.List;
 
 @Repository
 public interface ProductoRepository  extends JpaRepository<Producto,Integer> {
+    @Query(
+            value="SELECT * FROM Productos LIMIT 10 OFFSET ?1",
+            nativeQuery=true)
+    public List<Producto> getByLimit(int index);
+
 
 }
