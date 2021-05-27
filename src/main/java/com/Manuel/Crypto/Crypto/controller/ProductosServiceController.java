@@ -41,14 +41,6 @@ public class ProductosServiceController {
     }
 
 
-    @GetMapping("/{OFFSET}")
-    public ResponseEntity<List<Producto>> getProductByIndex(@PathVariable("OFFSET") int index)
-            throws RecordNotFoundException1 {
-        List<Producto> list  = (List<Producto>) service.getProductoByPages(index);
-
-        return new ResponseEntity<List<Producto>>(list, new HttpHeaders(), HttpStatus.OK);
-    }
-
 
     @PostMapping
     public ResponseEntity<Producto> CreateProduct(@Valid @RequestBody Producto myItem){

@@ -41,15 +41,6 @@ public class ProductosService {
         }
     }
 
-    public List<Producto> getProductoByPages(int index) throws RecordNotFoundException1 {
-        List<Producto> p = repository.getByLimit(index);
-
-        if(p.size()>=0) {
-            return p;
-        } else {
-            return new ArrayList<Producto>();
-        }
-    }
 
 //devuelve un producto por id
 
